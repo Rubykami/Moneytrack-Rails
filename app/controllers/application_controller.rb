@@ -1,4 +1,10 @@
 class ApplicationController < ActionController::API
+
+        self.abstract_class = true
+  
+        # Adjust default sort order
+        self.implicit_order_column = :created_at
+
         include DeviseTokenAuth::Concerns::SetUserByToken
 
         
@@ -10,6 +16,6 @@ class ApplicationController < ActionController::API
         protected 
 
         def configure_permitted_parameters
-                devise_parameter_sanitizer.permit(:sign_up, keys: [:name, :email, :password, :password_confirmation])
+                devise_parameter_sanitizer.permit(:sign_up, keys: [:name, :uuid, :email, :password, :password_confirmation])
         end
 end

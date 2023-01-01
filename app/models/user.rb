@@ -7,10 +7,10 @@ class User < ActiveRecord::Base
   include DeviseTokenAuth::Concerns::User
   has_many :accounts
 
+
   before_create {
     self.id = SecureRandom.uuid
   }
-
   
 
 end
