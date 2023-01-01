@@ -2,18 +2,16 @@
 
 one:
   name: MyString
-  ownername: MyString
   ownercpfnumber: MyString
   accountnumber: MyString
-  securitycode: 1
+  securitycode: MyString
   balancevalue: MyString
   accounttype: MyString
 
 two:
   name: MyString
-  ownername: MyString
   ownercpfnumber: MyString
   accountnumber: MyString
-  securitycode: 1
+  securitycode: MyString
   balancevalue: MyString
   accounttype: MyString

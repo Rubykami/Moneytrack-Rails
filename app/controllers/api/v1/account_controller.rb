@@ -1,4 +1,5 @@
 class Api::V1::AccountController < ApplicationController
+    before_action :authenticate_api_user!
 
     def index 
         @accounts = Account.all 

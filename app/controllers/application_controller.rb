@@ -1,9 +1,6 @@
 class ApplicationController < ActionController::API
 
-        self.abstract_class = true
-  
-        # Adjust default sort order
-        self.implicit_order_column = :created_at
+
 
         include DeviseTokenAuth::Concerns::SetUserByToken
 
