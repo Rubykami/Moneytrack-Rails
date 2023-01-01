@@ -1,5 +1,4 @@
 class Api::V1::UserController < ApplicationController
-    before_action :authenticate_api_user!
     wrap_parameters :user, include: [:password, :password_confirmation]
 
     def index 

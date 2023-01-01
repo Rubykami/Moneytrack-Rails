@@ -7,7 +7,7 @@ class ApplicationController < ActionController::API
         
         before_action :configure_permitted_parameters, if: :devise_controller?
 
-        wrap_parameters format: []
+        wrap_parameters format: [:json]
 
 
         protected 

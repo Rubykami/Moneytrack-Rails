@@ -1,5 +1,4 @@
 class Api::V1::AccountController < ApplicationController
-    before_action :authenticate_api_user!
 
     def index 
         @accounts = Account.all 
@@ -34,6 +33,6 @@ class Api::V1::AccountController < ApplicationController
     private 
 
     def account_params 
-        params.require(:account).permit(:name, :ownername, :ownercpfnumber, :accountnumber, :securitycode, :balancevalue, :accounttype, :user_id)
+        params.require(:account).permit(:name, :ownercpfnumber, :accountnumber, :securitycode, :balancevalue, :accounttype, :user_id)
     end 
 end
