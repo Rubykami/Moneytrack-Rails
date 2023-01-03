@@ -12,7 +12,7 @@ class User < ActiveRecord::Base
          has_many :accounts, dependent: :destroy
 
 
-         validates_length_of :accounts, maximum: 1
+         validates_length_of :accounts, maximum: 2
 
 
 
