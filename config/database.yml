@@ -3,8 +3,8 @@ development:
   encoding: unicode
   database: moneytrackrails_development
   pool: 5
-  username: postgres
-  password: rs0
+  username: seuusuariopostgreSQL
+  password: suasenhapostgreSQL
   template: template0
   host: localhost
   port: 5432
@@ -14,8 +14,8 @@ test: &test
   encoding: unicode
   database: moneytrackrails_test
   pool: 5
-  username: postgres
-  password: rs0
+  username: seuusuariopostgreSQL
+  password: suasenhapostgreSQL
   template: template0
   host: localhost
   port: 5432
@@ -25,7 +25,7 @@ production:
   encoding: unicode
   database: moneytrackrails_production
   pool: 5
-  username: postgres
-  password: rs0
+  username: seuusuariopostgreSQL
+  password: suasenhapostgreSQL
   template: template0
   host: localhost
