@@ -15,7 +15,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_01_01_234652) do
   enable_extension "pgcrypto"
   enable_extension "plpgsql"
 
-  create_table "accounts", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
+  create_table "accounts", force: :cascade do |t|
     t.string "name"
     t.string "ownercpfnumber"
     t.string "accountnumber"
@@ -44,6 +44,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_01_01_234652) do
     t.string "unlock_token"
     t.datetime "locked_at"
     t.string "name"
+    t.integer "balancevalue", default: 0
     t.string "email", default: "", null: false
     t.boolean "admin"
     t.text "tokens"

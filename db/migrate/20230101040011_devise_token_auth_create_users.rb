@@ -30,6 +30,7 @@ class DeviseTokenAuthCreateUsers < ActiveRecord::Migration[7.0]
 
       ## User Info
       t.string :name
+      t.integer :balancevalue, default: 0
       t.string :email, null: false, default: ''
       t.boolean :admin
 

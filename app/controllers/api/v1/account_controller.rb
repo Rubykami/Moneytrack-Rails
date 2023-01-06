@@ -14,6 +14,15 @@ class Api::V1::AccountController < ApplicationController
         end
     end 
 
+    def update
+        @account = Account.find(params[:id])
+        if @account.update(account_params)
+            render json: @account, status: 200
+        else 
+            render json: @account.errors, status: :unprocessable_entity
+        end
+    end
+
     def destroy 
         @account = Account.find(params[:id])
         @account.destroy

@@ -1,5 +1,5 @@
 class Api::V1::UserController < ApplicationController
-    wrap_parameters :user, include: [:password, :password_confirmation]
+    wrap_parameters :user, include: [:balancevalue]
 
     def index 
         @user = User.all 
@@ -23,16 +23,24 @@ class Api::V1::UserController < ApplicationController
 
     def show 
         @user = User.find(params[:id])
-        render json: @user,include: ['accounts']
+        render json: @user, include: ['accounts']
     end 
 
     def new 
-        
+    end
+
+    def update
+        @user = User.find(params[:id])
+        if @user.update(user_params)
+            render json: @user, include: ['accounts'], status: 200
+        else 
+            render json: @user.errors, status: :unprocessable_entity
+        end
     end
 
     private 
 
     def user_params 
-        params.require(:user).permit(:name, :email, :password, :password_confirmation)
+        params.require(:user).permit(:name, :email, :password, :password_confirmation, :balancevalue)
     end 
 end

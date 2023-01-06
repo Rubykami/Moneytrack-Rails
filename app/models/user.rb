@@ -10,15 +10,14 @@ class User < ActiveRecord::Base
   
   
          has_many :accounts, dependent: :destroy
+         validates :accounts, length: { minimum: 0, maximum: 2 }
+
+         
+           before_create {
+             self.id = SecureRandom.uuid
+           }
 
 
-         validates_length_of :accounts, maximum: 2
 
-
-
-  before_create {
-    self.id = SecureRandom.uuid
-  }
-  
 
 end
