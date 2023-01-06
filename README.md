@@ -22,5 +22,6 @@ Após fazer o seu cadastro, você poderá depositar dinheiro na sua carteira Org
 3. Vá para o arquivo config/database.yml e troque os campos username e password para o username e password do seu PostgreSQL, aqui eu usei
 username: seuusuariopostgreSQL e
 password: suasenhapostgreSQL
-4. O comando usado no terminal para iniciar o servidor é "rails s -p 3001". É muito importante que o comando utilizado seja esse.
+4. Digite o comando bundle install para instalar todas as gems(bibliotecas) do Rails.
+5. O comando usado no terminal para iniciar o servidor é "rails s -p 3001". É muito importante que o comando utilizado seja esse.
 
