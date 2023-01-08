@@ -23,6 +23,6 @@ Após fazer o seu cadastro, você poderá depositar dinheiro na sua carteira Org
 username: seuusuariopostgreSQL e
 password: suasenhapostgreSQL
 4. Digite o comando bundle install para instalar todas as gems(bibliotecas) do Rails.
-5. O comando usado no terminal para iniciar o servidor é "rails s -p 3001". É muito importante que o comando utilizado seja esse.
-6. Assim que você criar uma conta, um arquivo chamado rich.html irá abrir no seu editor de código, neste arquivo você deve clicar no link para ativar a sua conta.
+5. Assim que você criar uma conta, um arquivo chamado rich.html irá abrir no seu editor de código, neste arquivo você deve clicar no link para ativar a sua conta.
+6. O comando usado no terminal para iniciar o servidor é "rails s -p 3001". É muito importante que o comando utilizado seja esse.
 
